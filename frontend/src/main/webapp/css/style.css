@@ -1,0 +1,74 @@
+
+
+body { /*Tüm sayfanın ayarı body içerisinde*/
+    font-family: Segoe UI, Arial, sans-serif;     /*Yazı Tipi*/
+    background-color: #f2f2f2; /* arka plan rengi */
+}
+
+.container { /* class="container" şeklinde nerede kullanılırsa bu özellikler oraya etki eder */
+    max-width: 600px;   /* max Genişlik */
+    margin: 0 auto;  /*  container'ın diğer container ile arasındaki mesafe */
+    padding: 20px;  /* container'in içerisindeki elemanlara olan çerçeve uzaklığı */
+    background-color: #fff;     /* arkaplan rengi */
+    border: 1px solid #ccc;     /*  kenar çizigisi 1 pixsel kalınlığında (kenar kalınlığı)  solid düz çizgi dot derse kesikli çizgi ccc de kenar rengi */
+    border-radius: 5px;     /* oval kenar yani kenar açışı */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);   /*  gölge */
+}
+
+h1 {    /* başlık */
+    text-align: center;  /*  metinin konumu */
+    color: #333;    /* metin rengi */
+}
+
+form {  /* form özellikleri */
+    margin-top: 20px;       /* form üst uzaklığı  (margin:üst,sağ,alt,sol) */
+}
+/*#form-group bu şekilde tanımlarsam id olur.*/
+/*.form-group bu şekilde tanımlarsam class olur.*/
+.form-group {       /* class="form-group"  özellikler veriyorum */
+    margin-bottom: 20px;        /* form alt boşluğu */
+}
+
+.form-group label {     /*  <label></label>  içerisindeki özellikleri ayarlar */
+    display: block;     /* block elemanlar alt alta gelir, flex olursa elemanlar yanyana gelir */
+    color: #555;        /* renk */
+    font-weight: bold;      /* punto kalın */
+    margin-bottom: 5px;     /* aşağı dış öeröeve ayarı */
+}
+
+.form-group input[type="text"], /* form grup altındaki inputlarda tipi text olanların özellik ayarı    <input type="text" */
+.form-group input[type="email"] {/* form grup altındaki inputlarda tipi email olanların özellik ayarı    <input type="email" */
+    width: 100%;    /*ölçek*/
+    padding: 10px;      /*iç mesafe*/
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.button-container { /*button container class özellikleri*/
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button[type="submit"] {/* button-container bunun altında olan butonlardan tipi submit olan buton için özellikler*/
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;    /*üstüne geldiğinde el işaretinin gösterilmesi*/
+}
+
+.button-container button[type="submit"]:hover {/* button-container bunun altında olan butonlardan tipi submit olan butonun fare ile üzerine geldiğimizde olacak özellikler*/
+    background-color: #002db3;  /*arka plan  rengi değişecek*/
+}
+
+.button-container button[type="submit"]:focus { /*tıklandığında parmağını kaldırmadığın durum*/
+    outline: none; /*kenarlıklarını kaldırır*/
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /*gölge ayarı*/
+}
+
+.error-message { /*error message classının özellikleri*/
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
