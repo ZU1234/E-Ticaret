@@ -1,9 +1,7 @@
 package com.core.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "orders")
 public class Order {
@@ -11,12 +9,11 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer id;
-    private  String name;
-    private int  fiyat;
+    @OneToMany
+    private List<Product> productList;
+    private int  totalFiyat;
 
-    public String getName() {
-        return name;
-    }
+
 
     public Integer getId() {
         return id;
@@ -26,15 +23,19 @@ public class Order {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public List<Product> getProductList() {
+        return productList;
     }
 
-    public int getFiyat() {
-        return fiyat;
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
     }
 
-    public void setFiyat(int fiyat) {
-        this.fiyat = fiyat;
+    public int getTotalFiyat() {
+        return totalFiyat;
+    }
+
+    public void setTotalFiyat(int totalFiyat) {
+        this.totalFiyat = totalFiyat;
     }
 }

@@ -1,28 +1,21 @@
 package com.core.model;
 
 
-import org.springframework.context.annotation.Lazy;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
-@Entity(name = "users")//Tablo ismi
+@Entity(name = "useres")//Tablo ismi
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
     private String fullName;
-    private String name;
-    private String surname;
     private String email;
-//
-//    @ManyToOne
-//    private Order order;
+    private String password;
 
     public Integer getId() {
         return id;
@@ -40,22 +33,6 @@ public class User {
         this.fullName = fullName;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -64,11 +41,11 @@ public class User {
         this.email = email;
     }
 
-//    public Order getOrder() {
-//        return order;
-//    }
-//
-//    public void setOrder(Order order) {
-//        this.order = order;
-//    }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

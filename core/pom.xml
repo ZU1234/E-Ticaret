@@ -17,12 +17,6 @@
         <java.version>11</java.version>
     </properties>
     <dependencies>
-        <!--postgre ; PostgreSQL veritabanı desteği sağlar.-->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
 
         <!-- Spring Boot ile web uygulamaları geliştirmek için gerekli bağımlılıkları sağlar. -->
         <dependency>
@@ -53,13 +47,19 @@
         </dependency>
 
 
+
         <!-- Spring Boot ile birlikte Spring Data JPA kullanımını kolaylaştıran bir başlangıç bağımlılığıdır. -->
         <!-- JPA entegrasyonu için gerekli yapılandırmaları yapmanıza ve bağımlılıkları el ile belirtmenize gerek kalmaz.-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
     </dependencies>
+
 
 
     <build>

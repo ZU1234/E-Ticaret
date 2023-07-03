@@ -1,0 +1,2 @@
+
+JSP tag dosyaları, tekrar eden kod parçalarını gruplandırmak ve tekrar kullanmak için kullanılan bir JSP uzantısıdır. Bu dosyalar, JSP sayfalarında sık kullanılan bileşenleri veya özelleştirilmiş etiketleri tanımlamak için kullanılır. JSP tag dosyaları, kod tekrarını azaltır, geliştirme sürecini kolaylaştırır, kodun okunurluğunu artırır ve projenin sürdürülebilirliğini sağlar. Bu dosyaların kullanılmasıyla, web uygulamaları daha düzenli ve sürdürülebilir bir şekilde geliştirilebilir.

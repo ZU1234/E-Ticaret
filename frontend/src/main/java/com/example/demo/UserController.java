@@ -5,11 +5,9 @@ import com.core.services.UserService;
 import com.example.demo.form.UserForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
-
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
@@ -20,26 +18,28 @@ public class UserController {
         this.userService = userService;
     }
 
-
-    @GetMapping("/")
+    @GetMapping("/aa")
     public String viewRegisterForm(Model model) {
         UserForm userForm = new UserForm();
-        int size= userService.findAll().size();
-        if(size>0){
-        userForm.setFullName(userService.findAll().get(size-1).getFullName());}
+        int size = userService.findAll().size();
+        if (size > 0) {
+//            userForm.setName(userService.findAll().get(size - 1).getName());
+//            userForm.setSurname(userService.findAll().get(size - 1).getSurname());
+
+            System.out.println(userService.findAll().get(size - 1).getFullName()+"-----");
+        }
         model.addAttribute("userForm", userForm);
-        return "register";
+        return "login";
     }
 
-    @PostMapping("/")
-    public String register(Model model, @ModelAttribute("userForm") UserForm userForm) {
+    @PostMapping("/aa")
+    public String register(@ModelAttribute("userForm") UserForm userForm, Model model) {
         User user = new User();
-        user.setName(userForm.getName());
-        user.setEmail(userForm.getEmail());
-        user.setSurname(userForm.getSurname());
+//        user.setName(userForm.getName());
+//        user.setSurname(userForm.getSurname());
         user.setFullName(userForm.getName() + " " + userForm.getSurname());
         userService.save(user);
         model.addAttribute("userForm", userForm);
-        return "register";
+        return "login";
     }
 }

@@ -1,74 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-
-body { /*Tüm sayfanın ayarı body içerisinde*/
-    font-family: Segoe UI, Arial, sans-serif;     /*Yazı Tipi*/
-    background-color: #f2f2f2; /* arka plan rengi */
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
 }
-
-.container { /* class="container" şeklinde nerede kullanılırsa bu özellikler oraya etki eder */
-    max-width: 600px;   /* max Genişlik */
-    margin: 0 auto;  /*  container'ın diğer container ile arasındaki mesafe */
-    padding: 20px;  /* container'in içerisindeki elemanlara olan çerçeve uzaklığı */
-    background-color: #fff;     /* arkaplan rengi */
-    border: 1px solid #ccc;     /*  kenar çizigisi 1 pixsel kalınlığında (kenar kalınlığı)  solid düz çizgi dot derse kesikli çizgi ccc de kenar rengi */
-    border-radius: 5px;     /* oval kenar yani kenar açışı */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);   /*  gölge */
-}
-
-h1 {    /* başlık */
-    text-align: center;  /*  metinin konumu */
-    color: #333;    /* metin rengi */
-}
-
-form {  /* form özellikleri */
-    margin-top: 20px;       /* form üst uzaklığı  (margin:üst,sağ,alt,sol) */
-}
-/*#form-group bu şekilde tanımlarsam id olur.*/
-/*.form-group bu şekilde tanımlarsam class olur.*/
-.form-group {       /* class="form-group"  özellikler veriyorum */
-    margin-bottom: 20px;        /* form alt boşluğu */
-}
-
-.form-group label {     /*  <label></label>  içerisindeki özellikleri ayarlar */
-    display: block;     /* block elemanlar alt alta gelir, flex olursa elemanlar yanyana gelir */
-    color: #555;        /* renk */
-    font-weight: bold;      /* punto kalın */
-    margin-bottom: 5px;     /* aşağı dış öeröeve ayarı */
-}
-
-.form-group input[type="text"], /* form grup altındaki inputlarda tipi text olanların özellik ayarı    <input type="text" */
-.form-group input[type="email"] {/* form grup altındaki inputlarda tipi email olanların özellik ayarı    <input type="email" */
-    width: 100%;    /*ölçek*/
-    padding: 10px;      /*iç mesafe*/
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.button-container { /*button container class özellikleri*/
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
     text-align: center;
-    margin-top: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-
-.button-container button[type="submit"] {/* button-container bunun altında olan butonlardan tipi submit olan buton için özellikler*/
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;    /*üstüne geldiğinde el işaretinin gösterilmesi*/
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
-
-.button-container button[type="submit"]:hover {/* button-container bunun altında olan butonlardan tipi submit olan butonun fare ile üzerine geldiğimizde olacak özellikler*/
-    background-color: #002db3;  /*arka plan  rengi değişecek*/
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
 }
-
-.button-container button[type="submit"]:focus { /*tıklandığında parmağını kaldırmadığın durum*/
-    outline: none; /*kenarlıklarını kaldırır*/
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /*gölge ayarı*/
+.form button:hover,.form button:active,.form button:focus {
+    background: #43A047;
 }
-
-.error-message { /*error message classının özellikleri*/
-    color: red;
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
     font-size: 12px;
-    margin-top: 5px;
+}
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.form .register-form {
+    display: none;
+}
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.container:before, .container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.container .info {
+    margin: 50px auto;
+    text-align: center;
+}
+.container .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+}
+.container .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+}
+.container .info span a {
+    color: #000000;
+    text-decoration: none;
+}
+.container .info span .fa {
+    color: #EF3B3A;
+}
+body {
+    background-color: #8b7355;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.title{
+    color: #ffe7ba;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size:50px;
+}
+.welcome-title{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size:50px;
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffd39b;
+}
+
+th{
+    background-color: #87603f;
+    color: white;
 }
