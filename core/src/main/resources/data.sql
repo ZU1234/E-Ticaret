@@ -10,15 +10,15 @@ VALUES
 ('Alice Davis', 'alice.davis@example.com', 'password100');
 
 -- Products
-INSERT INTO products (name, description, property, stok, price)
+INSERT INTO products (name, description, image, price)
 VALUES
-('Product 1', 'Description 1', 'Property 1', 10, 100),
-('Product 2', 'Description 2', 'Property 2', 5, 200),
-('Product 3', 'Description 3', 'Property 3', 20, 150),
-('Product 4', 'Description 4', 'Property 4', 15, 300),
-('Product 5', 'Description 5', 'Property 5', 12, 250),
-('Product 6', 'Description 6', 'Property 6', 8, 180),
-('Product 7', 'Description 7', 'Property 7', 3, 350),
-('Product 8', 'Description 8', 'Property 8', 25, 120),
-('Product 9', 'Description 9', 'Property 9', 18, 220),
-('Product 10', 'Description 10', 'Property 10', 7, 280);
+('Spor Ayakkabı', 'Rahat ve şık spor ayakkabı', '/images/1.jpeg', 149.99),
+('Koşu Ayakkabısı', 'Yüksek performans için özel olarak tasarlanmış koşu ayakkabısı', '/images/2.jpeg', 199.99),
+('Klasik Ayakkabı', 'Şık ve elegant klasik tarzda ayakkabı', '/images/3.jpeg', 129.99),
+('Sneaker', 'Moda trendlerini yansıtan rahat sneaker ayakkabı', '/images/4.jpeg', 179.99),
+('Terlik', 'Hafif ve rahat terlik', '/images/5.jpeg', 49.99),
+('Babet', 'Kadınlar için şık ve rahat babet ayakkabı', '/images/6.jpeg', 89.99),
+('Sandık', 'Plaj veya yaz etkinlikleri için uygun sandalet', '/images/7.jpeg', 69.99),
+('Bot', 'Soğuk havalara karşı koruyucu ve sıcak bot', '/images/8.jpeg', 249.99),
+('Spor Ayakkabı', 'Erkekler için spor ve rahat ayakkabı', '/images/9.jpeg', 159.99),
+('Topuklu Ayakkabı', 'Elegan ve şık topuklu ayakkabı', '/images/10.jpeg', 199.99);

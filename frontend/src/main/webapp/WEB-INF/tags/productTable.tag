@@ -20,8 +20,6 @@
         <tr>
             <td>${product.name}</td>
             <td>${product.description}</td>
-            <td>${product.property}</td>
-            <td>${product.stok}</td>
             <td>${product.price}</td>
         </tr>
     </c:forEach>

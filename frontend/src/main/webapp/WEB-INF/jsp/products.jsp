@@ -4,4 +4,4 @@
 <%@ taglib prefix="my" tagdir="/WEB-INF/tags" %>
 <jsp:include page="../template/homeTemplate.jsp" />
 
-<my:productTable products="${products}" />
+<my:product products="${products}" />

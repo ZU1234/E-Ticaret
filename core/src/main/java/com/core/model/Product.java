@@ -12,8 +12,7 @@ public class Product {
     private Integer id;
     private String name;
     private String description;
-    private String property;
-    private Integer stok;
+    private String image;
     private Integer price;
 
     public Integer getId() {
@@ -40,20 +39,12 @@ public class Product {
         this.description = description;
     }
 
-    public String getProperty() {
-        return property;
+    public String getImage() {
+        return image;
     }
 
-    public void setProperty(String property) {
-        this.property = property;
-    }
-
-    public Integer getStok() {
-        return stok;
-    }
-
-    public void setStok(Integer stok) {
-        this.stok = stok;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Integer getPrice() {
