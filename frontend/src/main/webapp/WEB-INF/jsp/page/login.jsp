@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.example.demo.enums.PagesConstants" %>
 <%@ page import="com.example.demo.enums.UrlConstants" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 
@@ -13,7 +14,7 @@
 <spring:theme code="profile.email" text="email" var="emailVar"/>
 <spring:theme code="profile.password" text="password" var="passwordVar"/>
 <spring:theme code="profile.loginButton" text="loginButton" var="loginButtonVar"/>
-<jsp:include page="../template/homeTemplate.jsp" />
+<jsp:include page="../../template/homeTemplate.jsp" />
 
 <%-- forms --%>
 <c:set var="loginForm" value="${userForm}"/>
@@ -27,7 +28,7 @@
 <section>
     <div class="login-page">
         <div class="form">
-            <form:form id="loginForm" action="${UrlConstants.LOGIN}" method="post">
+            <form:form id="loginForm" action="${UrlConstant.URL_LOGIN_PAGE}" method="post">
                 <label class="form-label">
                     <input type="text" class="secondary-input" data-rule-trCharacter="false" name="email" id="emailE"
                            data-msg-required="<spring:theme code='profile.cannotBeEmpty' text='Can not be empty'/>"
@@ -52,7 +53,7 @@
             </form:form>
 
 
-            <p class="message">Not registered? <a href="<%= UrlConstants.REGISTER %>">Create an account</a></p>
+            <p class="message">Not registered? <a href="<%= UrlConstants.URL_REGISTER_PAGE %>">Create an account</a></p>
         </div>
     </div>
 </section>

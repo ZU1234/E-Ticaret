@@ -11,3 +11,166 @@
     font-family: "Times New Roman", Times, serif;
     font-size:10px;
 }
+
+/*Scroll Banner*/
+.smoothScroll {
+    overflow: hidden;
+    position: relative;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.advertisement-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.advertisement-slider {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.advertisement-inner {
+    display: flex;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.card {
+    max-width: 200px; /* Maksimum genişlik */
+}
+
+.image-container {
+    max-width: 100%; /* Maksimum genişlik */
+}
+.scroll-container {
+    width: 80%; /* İstenilen genişliği burada yüzde olarak belirleyebilirsiniz */
+    max-height: 80vh; /* İstenilen maksimum yüksekliği burada viewport yüksekliğine (vh) göre belirleyebilirsiniz */
+    border: 7px solid #163fd2; /* Kırmızı çerçeve */
+    margin: 20px auto 0; /* 20px üst boşluk, otomatik yatay hizalama */
+    padding: 0; /* İçeriye boşluk bırakmamak için padding değerini sıfırlayın */
+    display: flex; /* Verilerin yanyana kaymasını sağlamak için flex kullanın */
+    flex-wrap: nowrap; /* Verilerin bir satırda sığmasını sağlamak için flex-wrap kullanın */
+    overflow-x: scroll; /* Yatay kaydırmayı etkinleştirin */
+    scroll-behavior: smooth; /* Yumuşak kaydırmayı etkinleştirin */
+    scrollbar-width: none; /* Kaydırma çubuğunu gizle */
+    -ms-overflow-style: none; /* IE 11 için kaydırma çubuğunu gizle */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Webkit tarayıcıları için kaydırma çubuğunu gizle */
+}
+
+.scroll-container .card {
+    margin-right: 5px; /* Kartlar arasındaki boşluğu ayarlayın */
+}
+
+.scroll-container .card:last-child {
+    margin-right: 0; /* Son kartın sağ tarafında boşluk olmaması için margin-right değerini sıfırlayın */
+}
+/*contact*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Başlık stilleri */
+h1 {
+    color: #333333;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #555555;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* İçerik stilleri */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+    padding: 0;
+}
+
+/* Başlık stilleri */
+h1 {
+    color: #163fd2;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #333333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* İçerik stilleri */
+p {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #163fd2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d29a9;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+.contact-form{
+border: 1px solid #163fd2;
+
+    margin: auto;
+    padding: 20px;
+}

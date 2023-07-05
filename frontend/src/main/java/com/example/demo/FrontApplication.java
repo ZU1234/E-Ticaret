@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 //@ComponentScan(basePackages = {"com.core","com.example","com.security"})
-@ComponentScan(basePackages = {"com.core","com.example","com.security","com.security.repository"})
+@ComponentScan(basePackages = {"com.core","com.example"})
 public class FrontApplication {
     public static void main(String[] args) {
         SpringApplication.run(FrontApplication.class, args);

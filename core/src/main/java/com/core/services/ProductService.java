@@ -22,4 +22,7 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    public Product find(long productId) {
+        return productRepository.getById(productId);
+    }
 }

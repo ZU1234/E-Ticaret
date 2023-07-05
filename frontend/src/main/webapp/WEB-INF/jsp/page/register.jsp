@@ -4,6 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.example.demo.enums.UrlConstants" %>
+<jsp:include page="../../template/homeTemplate.jsp" />
 
 
 <spring:theme code="profile.fullName" text="Full name" var="fullNameVar"/>
@@ -28,7 +29,7 @@
 <section>
     <div class="login-page">
         <div class="form">
-            <form:form id="registerForm" action="${UrlConstants.REGISTER}" method="post" commandName="userForm">
+            <form:form id="registerForm" action="${UrlConstants.URL_REGISTER_PAGE}" method="post" commandName="userForm">
 
 
                 <label class="form-label">
@@ -70,7 +71,7 @@
                         <spring:theme code="profile.registerButton" text="registerButton"/>
                     </button>
                 </div>
-                <p class="message">Zaten hesabınız var mı? <a href="${UrlConstants.LOGIN}">Giriş Yap</a></p>
+                <p class="message">Zaten hesabınız var mı? <a href="${UrlConstants.URL_LOGIN_PAGE}">Giriş Yap</a></p>
 
 
             </form:form>
