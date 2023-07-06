@@ -1,8 +1,8 @@
 package com.example.demo.controller.component;
 
 import com.core.model.Product;
-import com.core.services.ProductService;
 import com.example.demo.enums.PagesConstants;
+import com.facade.product.ProductFacadeImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,28 +12,28 @@ import java.util.List;
 
 @Controller
 public class ComponentController {
-    private ProductService productService;
+    private ProductFacadeImpl productFacade;
 
-    public ComponentController(ProductService productService) {
-        this.productService = productService;
+    public ComponentController(ProductFacadeImpl productFacade) {
+        this.productFacade = productFacade;
     }
 
     @GetMapping("/productList")
     public String productList(Model model) {
-        List<Product> productList = productService.findAll();
+        List<Product> productList = productFacade.findAll();
         model.addAttribute("products", productList);
         return PagesConstants.PRODUCT_LIST_COMPONENT;
     }
 
     @GetMapping("/productDetails/{productId}")
     public String productDetails(@PathVariable("productId") long productId, Model model) {
-        Product product = productService.find(productId);
+        Product product = productFacade.find(productId);
         model.addAttribute("product", product);
         return PagesConstants.PRODUCT_DETAIL_COMPONENT;
     }
     @GetMapping("/scrollBanner")
     public String productBanner(Model model) {
-        List<Product> productList = productService.findAll();
+        List<Product> productList = productFacade.findAll();
         model.addAttribute("products", productList);
         return PagesConstants.SCROLL_BANNER_COMPONENT;
     }

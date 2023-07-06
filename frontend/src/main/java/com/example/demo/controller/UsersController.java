@@ -12,13 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UsersController {
 
-    private final UserService userService;
-
-
-    public UsersController(UserService userService) {
-        this.userService = userService;
-    }
-
     @GetMapping("/login")
     public String loginForm() {
         return PagesConstants.LOGIN_PAGE;
